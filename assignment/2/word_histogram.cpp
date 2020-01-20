@@ -18,15 +18,12 @@ int main() {
 
 		// updates the word's count.
 		(*dictionary.find(word)).second++;
-
-		// use dictionary.find, dictionary.end, and dictionary[]
 	}
 
 	vector<pair<string, unsigned>> wordList;
 	for (auto& t : dictionary) wordList.push_back(t);
 
 	std::sort(wordList.begin(), wordList.end(), comp);
-	// use the sort function
 
 	for (auto& t : wordList) printf("%u:%s\n", t.second, t.first.c_str());
 
